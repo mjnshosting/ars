@@ -1,3 +1,4 @@
 /dbs/*.sqlite3
 /interface/scripts/moss_tunnel
 /confs/epm-variables.php
+/trash
