@@ -2,3 +2,5 @@
 /interface/scripts/moss_tunnel
 /confs/epm-variables.php
 /trash
+/ip-block-search/.cloginrc
+/ip-block-search/device-list
