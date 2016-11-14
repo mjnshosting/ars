@@ -1,6 +1,5 @@
 /dbs/*.sqlite3
-/interface/scripts/moss_tunnel
-/confs/epm-variables.php
+/confs/ars-variables.php
 /trash
 /ip-block-search/.cloginrc
 /ip-block-search/device-list
