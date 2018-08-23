@@ -1,3 +1,4 @@
+*.swp
 /dbs/*.sqlite3
 /confs/ars-variables-dev.php
 /trash
