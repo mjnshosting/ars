@@ -1,0 +1,196 @@
+/*menu with jquery.horizontalNav.js*/
+
+.navigation { 
+	position:relative; 
+	display: block;
+	z-index: 11;
+	margin-top: 67px;
+}
+
+.sf-menu {
+	margin-top: 0px; 
+	font-style: normal;
+	border-bottom: 8px solid #277bc0;
+}
+.sf-menu ul {
+	position:absolute;
+	top:-999px; 
+	display:none;/* left offset of submenus need to match (see below) */
+}
+.sf-menu li { 
+	padding-left:0px; 
+	position:relative; 
+	background: none;
+}
+	.sf-menu a {
+		display: block;
+		text-decoration: none;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 15px;
+		color: #31353d;
+		text-transform: uppercase;
+	}
+		.sf-menu a:hover {text-decoration: none;}
+
+/*================================>> 1 Level <<========================================*/
+
+li.sfHover {position: relative;}
+.sf-menu > li > a {
+	display:block;
+	z-index: 100;
+	background: #f0f1f1;
+	padding: 36px 0px;
+	width: 100%;
+	text-align: center;
+}
+.sf-menu > li:first-child > a {	border-left: 0px;}
+.sf-menu > li {
+	display: block;
+	position: relative;
+	float: left;
+	width: 20%;
+/*	width: 16.666%; */
+}
+.sf-menu > li + li > a {
+	border-left: 1px solid #e5e6e6;
+}
+	.sf-menu > li.current > a,
+	.sf-menu > li:hover > a {
+	background: #277bc0;
+	color: #fff;
+	}
+	.sf-menu > li.sfHover > a {
+		background: #dcdedf;
+		color: #31353d;
+	}
+.sf-menu > li > a.sf-with-ul:after {
+	position: absolute;
+	bottom: -1px;
+	display: inline-block;
+	content: "\f107";
+	right: 50%;
+	margin-right: -7px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none !important;
+	height: 19px;
+	overflow: hidden;
+	width: 10px;
+}
+
+/*================================>> 2 Level <<========================================*/
+.sf-menu > li > ul, 
+.sf-menu > li.sfHover > ul {
+	left: 0px;
+	top: 87px;
+	width: 100%;
+	z-index:99;
+	text-align: center;
+	background: #f0f1f1;
+	padding-top: 33px;
+	padding-bottom: 33px;
+}
+
+.sf-menu > li > ul li { 
+	display: block;
+}
+.sf-menu > li > ul > li a {
+	display: inline-block;
+	position: relative;
+	line-height: 28px;
+}
+.sf-menu li li a:hover, 
+.sf-menu li.sfHover li.sfHover>a,
+.sf-menu li li:hover span,
+.sf-menu li.sfHover li.sfHover span { 
+	color: #277bc0;
+}
+	.sf-menu > li > ul > li > a.sf-with-ul:after {
+		position: absolute;
+		top: 6px;
+		display: inline-block;
+		content: "\f105";
+		right: -10px;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+}
+/*================================>> 3 Level <<========================================*/
+
+.sf-menu li li ul {
+	left: 208px;
+	top: -3px;
+	width: 194px;
+	z-index:99;
+	position: absolute;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	text-align: center;
+	background: #277bc0;
+}
+
+.sf-menu li li li {
+	display: block;
+}
+.sf-menu li li li a {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+	line-height: 28px;
+}
+.sf-menu li li li a:hover, 
+.sf-menu li li li.sfHover > a { color: #31353d;}
+
+.sf-menu li li ul:after {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 5px solid;
+	border-color: transparent #277bc0 transparent transparent;
+	left: -10px;
+	top: 13px;
+}
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+
+@media only screen and (max-width: 995px) {
+}
+@media only screen and (max-width: 795px) {
+
+}
+@media only screen and (max-width: 767px) {
+	/*nav {margin-bottom: 0px;padding-bottom: 0px;margin-top: 0px;}*/
+	.sf-menu { display:none;}
+	.h-menu:before { display: none;}
+
+	nav select {
+		height: 35px;
+		border: 1px solid #e5e6e6;
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color: #31353d;
+		background-color: #f0f1f1;
+		width:100%;
+	    outline: none;
+	    padding: 5px;
+		font-weight: normal;
+		margin-top: 40px;
+		margin-bottom: 0px;
+	}
+	nav select option:first-child {
+		color:#000;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+}

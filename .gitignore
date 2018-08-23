@@ -1,5 +1,11 @@
 /dbs/*.sqlite3
-/confs/ars-variables.php
+/confs/ars-variables-dev.php
 /trash
 /ip-block-search/.cloginrc
 /ip-block-search/device-list
+/proj-count
+/ip-block-search/route
+/
+/
+/
+/

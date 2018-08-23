@@ -1,0 +1,14 @@
+- Edit and Rename the following files. 
+- Run the move commands from the same folder as this INSTALL file. 
+
+mv confs/ars-variables.php-example confs/ars-variables.php
+mv ip-block-search/.cloginrc-example ip-block-search/.cloginrc
+mv ip-block-search/device-list-example ip-block-search/device-list
+
+- Run the collection script on any linux box using bash like so.
+
+nohup ./ip-block-search/collect-n-format.sh &
+
+-- Use the tail command to track its progress and view errors. 
+
+tail -n 50 -f ip-block-search/nohup.out
